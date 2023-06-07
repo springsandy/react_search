@@ -2,9 +2,11 @@ import './header.css'
 
 const header = () => {
   return (
-    <header className="header">
+    <header class="header">
       <div>
-        <h2>this is header</h2>
+        <h1 class="loge">
+          <a href="/">S&S</a>
+        </h1>
       </div>
     </header>
   );

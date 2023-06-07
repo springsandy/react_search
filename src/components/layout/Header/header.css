@@ -2,5 +2,13 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #61dafb;
+}
+
+.loge {
+  text-align: center;
+}
+
+.loge > a {
+  text-decoration: none;
+  color: black;
 }
