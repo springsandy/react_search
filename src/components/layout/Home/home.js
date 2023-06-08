@@ -1,14 +1,15 @@
 import Header from "../Header/header";
+import Search from "../Search/search"
 import Footer from "../Footer/footer";
 
 const home = () => {
   return (
-    <div>
+    <div class="bodyDiv">
       <Header />
 
-      <main>
-        <p>hello welcom home</p>
-      </main>
+      <div class="searchDiv">
+       <Search />
+      </div>
 
       <Footer />
     </div>
