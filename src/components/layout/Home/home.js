@@ -1,6 +1,6 @@
 import Header from "../Header/header";
 import Search from "../Search/search"
-import Footer from "../Footer/footer";
+// import Footer from "../Footer/footer";
 
 const home = () => {
   return (
@@ -11,7 +11,7 @@ const home = () => {
        <Search />
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
