@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './search.css';
 import axios from 'axios';
+import DataList from '../DataList/dataList';
 
-const Search = (event) => {
+const Search = () => {
+  const [dataList, setDataList] = useState()
   const search_button = () => {
     var searchText = document.getElementById("searchText").value;
     var client_id = 'IB7DxzurUvjMgJGnx9FG';
@@ -15,11 +17,24 @@ const Search = (event) => {
       }
     })
     .then((res) => {
-      // 리스트 페이지로 이동
+      setDataList(res.data)
     })
     .catch((err) => {
       console.log(err)
     })
+  }
+
+  if (dataList != null) {
+    return (
+      <div>
+        <div className="search">
+          <input id="searchText" type="text" placeholder="검색어 입력" />
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" onClick={search_button} />
+        </div>
+
+        <DataList dataList={dataList} />
+      </div>
+    )
   }
 
   return (
